@@ -1,0 +1,283 @@
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #4267B2;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 5px; /* Adjust for navbar height */
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px; /* Increase the max-width */
+  width: 100%;
+  padding: 40px; /* Increase the padding */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add margin to the container */
+}
+
+.create-post-form,
+.edit-post-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4267B2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.submit-button:hover {
+  background-color: #365899;
+}
+
+.post {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.post-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.post-upvotes {
+  font-size: 16px;
+  color: #555;
+}
+
+.comment {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.comment:first-child {
+  border-top: none;
+}
+
+.comment p {
+  margin: 0;
+}
+
+/* Sort Button */
+.sort-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4267B2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sort-button.active {
+  background-color: #00a99d;
+}
+
+.sort-button:hover {
+  background-color: #365899;
+}
+
+/* Post Cards */
+.post-card {
+  background-color: #f9f9f9; /* Light background color */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.post-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Additional Styling for Facebook-like Appearance */
+.post-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.post-card-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-card-header .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.post {
+  margin-bottom: 1rem;
+}
+
+.post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card-footer .like-button,
+.post-card-footer .comment-button {
+  background-color: #f0f2f5;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-card-footer .like-button:hover,
+.post-card-footer .comment-button:hover {
+  background-color: #e0e2e5;
+}
+
+/* Post Page Styles */
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Posts Wrapper */
+.posts-wrapper {
+  background-color: #e9ecef; /* Light background color for the wrapper */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
